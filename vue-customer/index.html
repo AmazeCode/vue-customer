@@ -39,5 +39,29 @@
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--
+      vue的程序调用顺序：index.html->main.js->App.vue，如果要注册全局组件的时候，就在main.js里面进行注册
+    vue程序包含三部分：1、模板（<template></template>中有且只有一个根标签），2、行为：处理逻辑（js），3、样式:解决样式
+    传值：string number boolean
+    引用：array object
+    父组件向子组件传值：方式通过绑定的方式传递：v-bind：属性,子组件通过props:{title:{type:String}}形式接收，
+    子组件向父组件传值：通过this.$emit("changeTitle"，"子组件向父组件传值")，
+    同时父组件绑定事件v-on:changeTitle="updateTitle($event)",此时事件名称必须是changeTitle否则接收不到，参数也必须是$event
+    取消请求路径里面的的#号，在new Vue的时候添加属性mode:"history"
+    <a></a>每次跳转都要重新加载页面，如果vue不刷新页面,采用<router-link></router-link>替换a标签
+    如果要使用http可以引用vue-resource
+    
+    自定义指令：指令名称rainbow
+    Vue.directive('rainbow',{
+        //el节点，binding事件，vnode虚拟Dome
+        bind(el,binding,vnode){
+            el.style.color = "#" + Math.random().toString(16).slice(2,8);
+        }
+    })
+    //自定义过滤器，标签内部使用<h2>{{blog.title | to-uppercase}}</h2>
+    Vue.filter("to-uppercase",function(value){
+        return value.toUpperCase();
+    })
+    -->
     </body>
 </html>
