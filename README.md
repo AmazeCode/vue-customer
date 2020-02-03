@@ -1,6 +1,6 @@
 ## vue-learn-demo
 ### 说明
-- vue-customer是一个单独的vue项目,改项目是vue基础学习，写的一个简单的用户管理系统,配套的数据接口为json-server-users，使用的是jsonplaceholder,具体搭建可参考官网(github搜索jsonplaceholder),vue-customer拿到本地后
+- vue-customer为简单的客户管理系统，改项目主要是用于学习vue知识，写的一个简单的用户管理系统,配套的数据接口为json-server-users，使用的是jsonplaceholder,具体搭建可参考官网(github搜索jsonplaceholder)
 
 ## 项目本地启动说明:
 ## 首先搭建json-server服务,json-server服务依赖node环境，如果没有node请先安装node环境(这个过程是自己搭建json-server服务，如果不想重新自己搭建，clone下拉项目，进入到json-server-user目录直接执行第5步即可)
